@@ -35,7 +35,7 @@ router.put('/:id', async (req, res) => {
     const task = await Task.findById(req.params.id);
     if (!task) return res.status(404).json({ message: 'Task not found' });
 
-    task.title = req.body.title ?? task.title;
+    task.title = (req.body.title !== undefined && req.body.title !== null) ? req.body.title : task.title;
     task.completed = req.body.completed ?? task.completed;
     task.deadline = req.body.deadline ?? task.deadline; // Tarih güncellemesi
 
