@@ -24,7 +24,7 @@ mongoose.connect('mongodb://localhost:27017/task-manager', {
   .catch((err) => console.log("MongoDB connection error:", err));
 
 // Basit bir API endpoint
-app.get('/tasks', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Task list will be here');
 });
 
