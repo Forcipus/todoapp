@@ -8,7 +8,7 @@ const https = require('https');
 const fs = require('fs');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors({
   origin: 'http://13.60.86.235:3000', // Frontend'in çalıştığı IP adresi ve portu
