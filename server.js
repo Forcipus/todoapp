@@ -28,6 +28,6 @@ app.get('/tasks', (req, res) => {
   res.send('Task list will be here');
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
